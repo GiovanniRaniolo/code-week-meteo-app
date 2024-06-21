@@ -1,0 +1,20 @@
+/* <=== GLOBAL ===> 
+global window, logo and typography) */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("./css/global.css");
+
+/* <=== MAIN SECTION ===> 
+temperature, conditions, city name and date */
+@import url("./css/main-section.css");
+
+/* <=== PANEL ===> 
+search-bar, highlighted cities, details */
+@import url("./css/panel.css");
+
+/* <=== MODAL ===> 
+warning and error messages */
+@import url("./css/modal.css");
+
+/* <=== MEDIA-QUERY ===> 
+responsive adaptation */
+@import url("./css/media-query.css");

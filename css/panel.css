@@ -1,0 +1,150 @@
+/* Panel container */
+.panel {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    top: 0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 1em;
+    overflow-y: hidden;
+}
+
+/* Search form */
+.panel form {
+    margin-bottom: 1em;
+}
+
+.search {
+    background: none;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    padding: 0 1em 0.5em 0;
+    width: 80%;
+    color: #fff;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search::placeholder {
+    color: #ccc;
+}
+
+/* Search button */
+.submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.2em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: #fa6d1b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+
+.submit:hover {
+    background: #fff !important;
+    color: #000;
+}
+
+/* Highlighted city list */
+.panel .cities {
+    padding: 0 0 1em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li {
+    color: #ccc;
+    margin: 0.4em 0;
+}
+
+.panel ul h4 {
+    margin: 1.4em 0;
+}
+
+.cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cities li {
+    flex: 0 0 calc(50% - 5px);
+    color: #ccc;
+}
+
+.city {
+    padding-left: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.city:hover {
+    color: #fff;
+}
+
+/* Weather details */
+.details {
+    border-bottom: none;
+}
+
+.details h4 {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.details li {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.28);
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+}
+
+.details span {
+    font-size: 1em;
+}
+
+.details li span {
+    flex: 1;
+}
+
+.details li i {
+    margin-left: 10px;
+    font-size: 1em;
+    color: #abaaaa;
+}
+
+.cloud,
+.humidity,
+.wind,
+.temp-min,
+.temp-max,
+.sunrise,
+.sunset {
+    font-style: italic;
+}
+
+.temp-max {
+    color: #ff965a;
+}
+
+.temp-min {
+    color: #80fbff;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragusa Meteo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- JS Logic -->
+    <script type="module" src="./script.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+
+    <!-- Font Awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Global Container -->
+    <div class="weather-app">
+
+        <!-- Logo -->
+        <div class="logo-brand">
+            <img src="./images/logo.png" class="logo" height="40" width="40" alt="logo meteo ragusa">
+            <h3 class="brand">Ragusa Meteo</h3>
+        </div>
+
+        <!-- Main Container -->
+        <div class="container">
+
+            <!-- Temperature and Conditions -->
+            <div class="weather">
+                <h2 class="temp">-&#176;</h2>
+                <div class="icon-and-condition">
+                    <img src="./images/clear.png" class="icon" height="48" width="48" alt="weather icon">
+                    <span class="condition">cielo sereno</span>
+                </div>
+            </div>
+
+            <!-- City and Date -->
+            <div class="city-time">
+                <h1 class="name">-</h1>
+                <p>
+                    <span class="time">-:-</span>
+                    <span class="date">
+                        - -/-/-
+                    </span>
+                </p>
+            </div>
+
+        <!-- END Main Container -->    
+        </div>
+
+        <!-- Panel -->
+        <div class="panel">
+
+            <!-- Search Bar -->
+            <form action="" id="locationInput">
+                <input type="text" class="search" placeholder="Inserisci una città...">
+                <button type="submit" class="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- City List -->
+            <ul class="cities">
+                <li class="city">Ragusa</li>
+                <li class="city">Vittoria</li>
+                <li class="city">Modica</li>
+                <li class="city">Comiso</li>
+                <li class="city">Scicli</li>
+                <li class="city">Ispica</li>
+                <li class="city">Pozzallo</li>
+                <li class="city">Santa Croce Camerina</li>
+                <li class="city">Acate</li>
+                <li class="city">Chiaramonte Gulfi</li>
+                <li class="city">Giarratana</li>
+                <li class="city">Monterosso Almo</li>
+            </ul>
+
+            <!-- Details -->
+            <ul class="details">
+                <h4>DETTAGLI</h4>
+                <li>
+                    <span>nuvolosità</span>
+                    <span class="cloud">-</span>
+                    <i class="fas fa-cloud"></i> 
+                </li>
+                <li>
+                    <span>umidità</span>
+                    <span class="humidity">-</span>
+                    <i class="fas fa-tint"></i>
+                </li>
+                <li>
+                    <span>vento</span>
+                    <span class="wind">- km/h</span>
+                    <i class="fas fa-wind"></i>                         
+                </li>
+                <li>
+                    <span>min</span>
+                    <span class="temp-min">-&#176;</span>
+                    <i class="fas fa-temperature-low"></i>
+                </li>
+                <li>
+                    <span>max</span>
+                    <span class="temp-max">-&#176;</span>
+                    <i class="fas fa-temperature-high"></i>
+                </li>
+                <li>
+                    <span>alba</span>
+                    <span class="sunrise">-:-</span>
+                    <i class="fas fa-sun"></i>  
+                </li>
+                <li>
+                    <span>tramonto</span>
+                    <span class="sunset">-:-</span>
+                    <i class="fas fa-moon"></i>     
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal - warning-error -->
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+            <i class="close fas fa-times-circle"></i>
+            <p id="modal-text"></p>
+        </div>
+    
+    <!-- END global container -->
+    </div>
+</body>
+</html>

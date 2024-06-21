@@ -56,7 +56,8 @@ Welcome to Ragusa Meteo, a sleek and responsive weather application that provide
     `cd ragusa-meteo` 
     
 3.  **Run the app:** 
-Run the file: `index.html`
+
+    run the file: `index.html`
 
 > This project doesn't have any npm dependencies, but ensure you have a
 > modern browser to run the application.
@@ -148,7 +149,7 @@ let cityInput = "ragusa,IT";`
 In this code, we have a function that is immediately invoked (IIFE) and adds an event listener to each city element. When a city is clicked, it updates the ```cityInput``` variable with the name of the clicked city, fetches weather data using the ```fetchWeatherData()``` function, and hides the weather app by setting its opacity to "0". The function is documented using comments, which provide information about the function's purpose, parameters, and return values.
 
 ```js
-/**
+/*
  * Event listener for predefined cities.
  * When a city is clicked, it updates the cityInput variable, fetches weather data,
  * and hides the weather app.
@@ -192,7 +193,7 @@ function showFeedback(message) {
 An event listener is added to the search form. When the form is submitted, it checks if the search input is empty. If it is not, it sets the `cityInput` to the search value, fetches the weather data, and clears the search input. The form submission is prevented from its default behavior.
 
 ```js
-/**
+/*
  * Event listener for the search form.
  * Validates the input, updates the cityInput, fetches weather data, clears the search input,
  * and hides the weather app to provide a smooth transition.
@@ -228,7 +229,7 @@ An event listener is added to the search form. When the form is submitted, it ch
 The `dayOfTheWeek` function returns the name of the day of the week for a given date.
 
 ```js
-/**
+/*
  * This function calculates the day of the week based on the provided date.
  *
  * @param {number} day - The day of the month (1-31).
@@ -262,7 +263,7 @@ For example, if the `condition` is "*clear*" and the `timeOfDay` is "*day*", the
 This function is used to provide a variety of background images based on the weather condition and time of day, representing Ragusa and its neighboring cities (provincia). These images are applied only to the highlighted cities. The randomness helps to create a more dynamic and engaging user experience.
 
 ```js
-/**
+/*
  * This function generates a random image URL based on the weather condition and time of day.
  *
  * @param {string} condition - The weather condition (e.g., 'clear', 'clouds', 'rain', 'snow').
@@ -294,7 +295,7 @@ function getRandomImage(condition, timeOfDay) {
 
 
 ```js
-/**
+/*
  * This function is used to get the appropriate weather icon based on the weather condition.
  *
  * @param {string} weatherCondition - The weather condition to match with the icon.
@@ -346,7 +347,7 @@ Here's a breakdown of the code:
 
 
 ```js
-/**
+/*
  * Updates the weather data on the webpage.
  *
  * @param {Object} data - The weather data received from the API.
@@ -419,7 +420,7 @@ Here's a breakdown of the code:
 This snippet is crucial for providing a dynamic and visually appealing user experience by changing the background image and button color based on the weather conditions and time of day.
 
 ```js
-/**
+/*
  * Updates the background of the weather app based on the weather condition and time of day.
  * @param {Object} data - The weather data object received from the OpenWeather API.
  * @returns {void}
@@ -495,7 +496,7 @@ Here's a breakdown of the code:
 5. If the fetch request fails (e.g., due to a network error or a 404 status code), the Promise is rejected. In this case, the `catch()` block is executed, and the `showFeedback()` function is called with an error message. The opacity of the app is then set back to 1 to display the error message.
 
 ```js
-/**
+/*
  * Fetches weather data from OpenWeather API and updates the interface.
  *
  * @function fetchWeatherData
@@ -540,7 +541,7 @@ This line is placed after the `fetchWeatherData()` function call to ensure that 
 Overall, this code snippet is crucial for the proper functioning of the weather application, as it initiates the data fetching process and sets the initial state of the user interface.
 
 ```js
-/**
+/*
  * This function is the entry point of the weather application.
  * It invokes the fetchWeatherData function to retrieve weather data and updates the interface.
  * After fetching the data, it sets the opacity of the app to 1 to make it visible.
@@ -565,7 +566,7 @@ The CSS file includes media queries to ensure the application is responsive acro
 Contributions are welcome! Please follow these steps to contribute:
 
 1.  Fork the repository
-2.  Create a new branch (`git checkout -b feature-branch`)
-3.  Commit your changes (`git commit -m 'Add new feature'`)
-4.  Push to the branch (`git push origin feature-branch`)
+2.  Create a new branch: `git checkout -b feature-branch`
+3.  Commit your changes: `git commit -m 'Add new feature'`
+4.  Push to the branch: `git push origin feature-branch`
 5.  Open a pull request

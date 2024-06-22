@@ -19,10 +19,18 @@ Welcome to Ragusa Meteo, a sleek and responsive weather application that provide
     -   [HTML](#html)
     -   [CSS](#css)
     -   [JavaScript](#javascript)
+        - [Constants and DOM Elements](#constants-and-dom-element-selections)
+        - [Event Listeners for Predefined Cities](#event-listeners-for-predefined-cities)
+        - [Showing the Error Modal](#showing-the-error-modal)
+        - [Event Listener for the Search Form](#event-listener-for-the-search-form)
+        - [Getting the Day of the Week](#getting-the-day-of-the-week)
+        - [Selecting a Random Image](#selecting-a-random-image)
+        - [Correlating the Weather Icon](#correlating-the-weather-icon)
+        - [Update the DOM with the weather data](#update-the-dom-with-the-weather-data)
+        - [Update the app background](#update-the-app-background-based-on-the-weather-condition-and-time-of-day)
+        - [Main function to fetch weather data](#main-function-to-fetch-weather-data-from-openweather-api-and-update-the-interface)
+        - [Invoke the main function](#invoke-the-main-function)
 -   [API Integration](#api-integration)
--   [Event Handling](#event-handling)
--   [Background and Icon Logic](#background-and-icon-logic)
--   [Error Handling](#error-handling)
 -   [Media Queries and Responsiveness](#media-queries-and-responsiveness)
 -   [Contributing](#contributing)
 -   [License](#license)
@@ -260,7 +268,7 @@ The function then constructs the path to the random image using template literal
 
 For example, if the `condition` is "*clear*" and the `timeOfDay` is "*day*", the function will return the path to a random image from the `./images/day-rg/clear0.jpg` to `./images/day-rg/clear5.jpg` directory.
 
-This function is used to provide a variety of background images based on the weather condition and time of day, representing Ragusa and its neighboring cities (provincia). These images are applied only to the highlighted cities. The randomness helps to create a more dynamic and engaging user experience.
+This function is used to provide a variety of background images based on the weather condition and time of day, representing Ragusa and its neighboring cities. These images are applied only to the highlighted cities. The randomness helps to create a more dynamic and engaging user experience.
 
 ```js
 /*
@@ -559,7 +567,133 @@ The application uses the [OpenWeatherMap API](https://openweathermap.org/api) to
 
 ## Media Queries and Responsiveness
 
-The CSS file includes media queries to ensure the application is responsive across different screen sizes. The layout adapts for mobile and small mobile devices, tablets and desktops, providing a seamless user experience on all devices.
+The CSS folder includes ```media-query.css``` to ensure the application is responsive across different screen sizes. The layout adapts for mobile and small mobile devices, tablets and desktops, providing a seamless user experience on all devices.
+
+The code is organized into four media queries, each targeting a specific range of devices:
+
+1. **Mobile - Up to iPad Air and Mini** (*max-width: 1023px*)
+
+- Adjusts the font size of the HTML root element to 10px.
+- Sets the maximum width of the logo to 22px and makes it responsive (height: auto).
+- Adjusts the container's width to 100%, height to 60dvh (viewport height), padding, and alignment.
+- Centers the weather elements horizontally and reduces the gap between them.
+- Positions the panel at the bottom of the screen, making it fixed.
+- Sets the panel's width and height to 100% and adjusts the padding.
+- Adjusts the size of the icons to 40px x 40px.
+
+2. **Adaptations to Small Mobile** (*max-width: 411px*)
+
+- Reduces the font size of the HTML root element to 8px.
+
+3. **For Tablet** (*min-width: 600px*) *and* (*max-width: 1023px*):
+
+- Positions the panel at the right side of the screen, making it fixed.
+- Adjusts the panel's width and height, padding, background color, box shadow, backdrop filter, border, and z-index.
+- Enables vertical scrolling for the panel.
+
+4. **For iPad Pro and small desktop** (*min-width: 1024px*) *and* (*max-width: 1440px*):
+
+- Adjusts the font size of the HTML root element to 10px.
+- Adjusts the container's gap, justify-content, and maximum height.
+- Adjusts the panel's width and height.
+
+
+```css
+/* For Mobile - Up to iPad Air and Mini */
+@media (max-width: 1023px) {
+    /* Set the font size for mobile devices */
+    html {
+        font-size: 10px;
+    }
+
+    /* Adjust the logo size for mobile devices */
+    .logo {
+        max-width: 22px;
+        height: auto;
+    }
+
+    /* Adjust the container layout for mobile devices */
+    .container {
+        width: 100%;
+        height: 60dvh;
+        padding: 0.5em;
+        align-items: center;
+    }
+
+    /* Adjust the weather section for mobile devices */
+    .weather {
+        justify-content: center;
+        gap: 1em;
+        padding-bottom: 0em;
+    }
+
+    /* Adjust the panel position and size for mobile devices */
+    .panel {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 2em;
+    }
+
+    /* Adjust the icon size for mobile devices */
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Adaptations to Small Mobile */
+@media (max-width: 411px) {
+    /* Adjust the font size for small mobile devices */
+    html {
+        font-size: 8px;
+    };
+}
+
+/* For Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+    /* Adjust the panel position, size, and style for tablet devices */
+    .panel {
+        position: fixed;
+        width: 40%;
+        height: auto;
+        right: 0;
+        left: auto;
+        padding: 1em;
+        background: rgba(110, 110, 110, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        z-index: 1;
+        overflow-y: auto;
+    }
+}
+
+/* For iPad Pro and small desktop */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Adjust the font size for iPad Pro and small desktop devices */
+    html {
+        font-size: 10px;
+    };
+
+    /* Adjust the container layout for iPad Pro and small desktop devices */
+    .container{
+        gap: 100px;
+        justify-content:space-evenly;
+        max-height: 50%;
+    }
+
+    /* Adjust the panel size for iPad Pro and small desktop devices */
+    .panel {
+        width: 30%;
+        height: auto;
+    }
+}
+```
 
 ## Contributing
 

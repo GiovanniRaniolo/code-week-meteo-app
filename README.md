@@ -33,7 +33,6 @@ Welcome to Ragusa Meteo, a sleek and responsive weather application that provide
 -   [API Integration](#api-integration)
 -   [Media Queries and Responsiveness](#media-queries-and-responsiveness)
 -   [Contributing](#contributing)
--   [License](#license)
 
 ## Features
 

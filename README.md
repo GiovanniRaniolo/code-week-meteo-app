@@ -55,12 +55,12 @@ Welcome to Ragusa Meteo, a sleek and responsive weather application that provide
 
 1.  **Clone the repository:**
     
-    `git clone https://github.com/yourusername/ragusa-meteo.git` 
+    `git clone https://github.com/GiovanniRaniolo/code-week-meteo-app` 
     
 2.  **Navigate to the project directory:**
    
     
-    `cd ragusa-meteo` 
+    `cd code-week-meteo-app` 
     
 3.  **Run the app:** 
 

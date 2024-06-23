@@ -1,4 +1,4 @@
-import { API_KEY } from "./keys.js";
+//import { API_KEY } from "./keys.js";
 
 const panelCities = ["ragusa", "vittoria", "modica", "comiso", "scicli", "ispica", "comune di pozzallo", "santa croce camerina", "acate", "chiaramonte gulfi", "giarratana", "monterosso almo"];
 const app = document.querySelector(".weather-app");
@@ -21,8 +21,8 @@ const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
 let cityInput = "ragusa,IT";
 
-/* const API_KEY = "IMPORTANT!!! PUT_YOUR_API_KEY_HERE_AND_COMMENT_LINE_1
-                || OR_CREATE_YOUR_OWN_FILE_keys.js_TO_IMPORT_AT_LINE_1";*/
+/*"IMPORTANT!!! CREATE_YOUR_OWN_FILE_keys.js_TO_IMPORT_AT_LINE_1";*/
+const API_KEY = "a29cd80110e9362f486fa38a9f70b3dd"; // Don't forget to remove your API Key from here!!!              
 
 // Event listeners for predefined cities
 cities.forEach((city) => {
